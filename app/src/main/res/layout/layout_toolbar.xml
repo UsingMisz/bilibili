@@ -1,0 +1,60 @@
+
+   <android.support.design.widget.AppBarLayout
+    android:id="@+id/app_bar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+       app:elevation="@dimen/app_bar_elevation"
+        >
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/ToolBar.TitleText" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <main.zzy.com.study_01.widget.CircleImageView
+            android:id="@+id/toolbar_user_avatar"
+            android:layout_width="@dimen/circle_user_small_size"
+            android:layout_height="@dimen/circle_user_small_size"
+            android:layout_marginEnd="@dimen/default_tiny_margin"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:src="@drawable/headimage"
+            app:border_color="@color/white"
+            app:border_width="@dimen/circle_default_width" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_textName"
+                android:textColor="@color/white"
+                android:maxLines="1"
+                android:textSize="@dimen/default_medium_text_size"
+                android:layout_marginStart="@dimen/default_general_margin"/>
+
+             </LinearLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+       <main.zzy.com.study_01.widget.NoScrollViewPager
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:overScrollMode="never"
+           android:id="@+id/viewpager">
+
+       </main.zzy.com.study_01.widget.NoScrollViewPager>
+
+
+</android.support.design.widget.AppBarLayout>
